@@ -1,0 +1,340 @@
+
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,top=1.3cm,bottom=2cm,left=1cm,right=1cm,marginparwidth=0.75cm]{geometry}
+
+\usepackage{mathtext} 
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{cmap}
+\usepackage{longtable}
+\usepackage{icomma}
+\usepackage{euscript}
+\usepackage{float}
+\usepackage{cutwin}
+\usepackage{mathrsfs}
+\usepackage{adjustbox}
+\usepackage{dashbox}
+\usepackage[normalem]{ulem}
+\usepackage[T1,T2A]{fontenc}	
+\usepackage[utf8]{inputenc}         
+\usepackage[english,russian]{babel} 
+\usepackage[babel=true]{microtype}
+\RequirePackage[T1]{fontenc}ц
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs,mathtools} 
+\usepackage{xcolor}         
+\usepackage{enumitem}     
+\usepackage{xpatch}       
+\usepackage{cancel}                  
+\usepackage{upgreek}                 
+\usepackage{lipsum}                  
+\usepackage[version=4]{mhchem}       
+\usepackage{multirow}                
+\usepackage{stackengine}             
+\usepackage{tikz}         
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue}       
+\usetikzlibrary{positioning}         
+\usepackage{titletoc}                
+\usepackage{titlesec}                
+\usepackage{wrapfig}                 
+\usepackage{chngcntr}              
+\usepackage{fancyhdr}                
+\usepackage{makecell}                
+\usepackage{indentfirst}             
+\usepackage{tocloft}                 
+\usepackage{soul}                   
+\usepackage[stable]{footmisc}       
+\usepackage{subfig}                  
+
+\mathtoolsset{showonlyrefs=true}
+
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Определение}
+\newtheorem{statement}{Предложение}[section]
+\newtheorem{lemma}{Лемма}[section]
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem*{theoremn}{Теорема}
+\newtheorem*{corollary}{Следствие}
+\newtheorem*{example}{Пример}
+\newtheorem*{note}{Замечание}
+\newtheorem*{problem}{Задача}
+
+
+\counterwithout{footnote}{section}\DeclareRobustCommand{\divby}{%
+	\mathrel{\text{\vbox{\baselineskip.65ex\lineskiplimit0pt\hbox{.}\hbox{.}\hbox{.}}}}%
+}
+
+\newcommand{\dotpr}[2]{\bra{#1}\ket{#2}}
+\let\AA\relax
+\let\emptyset\varnothing
+\DeclareMathOperator*{\esssup}{ess sup}
+\DeclareMathOperator*{\ord}{ord}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\pr}{pr}
+\DeclareMathOperator*{\Ker}{Ker}
+\DeclareMathOperator*{\Vol}{Vol}
+\DeclareMathOperator*{\rg}{rk}
+\DeclareMathOperator*{\Ima}{Im}
+\DeclareMathOperator*{\Alt}{Alt}
+\DeclareMathOperator*{\Sym}{Sym}
+\newcommand{\eqdef}{\stackrel{\text{\tiny{def}}}{=}}
+\newcommand{\pp}{\partial}
+\newcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\FFF}{\mathbb{F}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\sS}{\mathcal{S}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+		\node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+
+
+\title{Измерение коэффициента поверхностного натяжения жидкости (2.5.1)}
+\author{Севастьян Черняков Б05-207}
+\date{\today}
+
+
+\begin{document}
+	\maketitle
+	\section{Аннотация}
+	В данной работе мы находим коэффициент поверхностного натяжения, с помощью иглы, колб с жидкостями и аспиратора, создающего разность давления.
+	\section{Введение}
+	\noindent\textbf{Цель работы:}
+	1) измерение температурной зависимости  коэффициента поверхностного натяжения дистиллированной воды с использованием известного коэффициента поверхностного натяжения спирта; 2) определение полной поверхностной энергии  и теплоты, необходимой для изотермического образования единицы  поверхности жидкости  при различной температуре.
+	
+	\bigskip
+	\noindent\textbf{В работе используются:} прибор  Ребиндера  с термостатом и микроманометром; исследуемые жидкости; стаканы; микроскоп.
+	\section{Теоретические сведения}
+	
+	Наличие поверхностного слоя приводит к различию давлений по разные стороны от искривленной границы раздела двух сред.  Для сферического пузырька с воздухом  внутри жидкости избыточное давление дается формулой Лапласа:
+	
+	\begin{equation}
+		\Delta P = P_{int} - P_{ext} = \frac{2\sigma}{r},
+		\label{key}
+	\end{equation}
+	где $ \sigma $ -- коэффициент поверхностного натяжения, $ P_{int} $ и $ P_{ext} $ -- давление внутри пузырька и снаружи, $ r $ -- радиус кривизны поверхности раздела двух фаз. Эта формула лежит в основе предлагаемого метода определения коэффициента поверхностного натяжения жидкости. Измеряется давление $ \Delta P $, необходимое для выталкивания в жидкость пузырька воздуха.
+	
+	\section{Экспериментальная установка}
+	
+	\begin{wrapfigure}{R}{6cm}
+		%\vspace{-61pt}
+		\begin{center}
+			\includegraphics[width=5.9cm]{Screenshot from 2023-02-19 17-25-26.png}
+			\caption{Рисунок экспериментальной установки}
+			\label{img:ust}
+		\end{center}
+	\end{wrapfigure}
+	
+	Исследуемая жидкость (дистиллированная вода) наливается в сосуд (колбу) $ B $ (рис. \eqref{img:ust}). Тестовая жидкость  (этиловый спирт) наливается  в сосуд $ E $.  При измерениях  колбы герметично закрываются  пробками. Через одну из двух пробок  проходит полая металлическая игла $ С $. Этой пробкой закрывается сосуд, в котором  проводятся измерения. Верхний конец иглы открыт в атмосферу, а нижний погружен в жидкость. Другой сосуд герметично закрывается второй пробкой. При создании достаточного  разряжения воздуха в колбе с иглой пузырьки воздуха начинают пробулькивать через жидкость. Поверхностное натяжение можно определить по величине разряжения $ \Delta P $ \eqref{key}, необходимого для прохождения пузырьков (при известном радиусе иглы).
+	
+	Разряжение в системе создается с помощью аспиратора $ A $. Кран $ K_2 $ разделяет две полости аспиратора. Верхняя полость при закрытом кране $ K_2 $ заполняется водой. Затем кран $ K_2 $ открывают и заполняют водой  нижнюю полость  аспиратора.  Разряжение воздуха создается в нижней полости  при открывании крана $ K_1 $, когда  вода вытекает из неё по каплям. В колбах $ В $ и $ С $, соединённых трубками с нижней полостью аспиратора, создается такое же пониженное давление. Разность давлений в полостях с разряженным воздухом и атмосферой измеряется спиртовым микроманометром. 
+	
+	Для стабилизации температуры исследуемой жидкости через рубашку $ D $ колбы $ В $ непрерывно прогоняется вода из термостата.
+	
+	Обычно кончик иглы лишь касается поверхности жидкости, чтобы исключить влияние гидростатического давления столба жидкости. Однако при измерении температурной зависимости коэффициента поверхностного натяжения возникает ряд сложностей. Во-первых, большая теплопроводность металлической трубки приводит к тому, что температура на конце трубки заметно ниже, чем в глубине жидкости. Во-вторых, тепловое расширение поднимает уровень жидкости при увеличении температуры.
+	
+	Обе погрешности можно устранить, погрузив кончик трубки до самого дна. Полное давление, измеренное при этом микроманометром, равно \[ P = \Delta P + \rho g h.\] Заметим, что $ \rho gh $ от температуры практически не зависит, так как подъём уровня жидкости компенсируется уменьшением её плотности (произведение $ \rho g $ определяется массой всей жидкости и поэтому постоянно). Величину  $ \rho g h $ следует измерить двумя способами.
+	
+	Во-первых, замерить величину $ P_1= \Delta P' $, когда кончик трубки только касается поверхности жидкости. Затем при этой же температуре опустить иглу до дна и замерить $ P_2= \rho gh + \Delta P'' $ ($ \Delta P' $, $ \Delta P'' $ -- давление Лапласа). Из-за  несжимаемости  жидкости можно положить $ \Delta P' = \Delta P'' $ и тогда \[ \rho gh= P_2 - P_1. \]
+	
+	Во-вторых, при измерениях $ P_1 $ и $ P_2 $ замерить линейкой  глубину погружения иглы $ h $. Это можно сделать, замеряя расстояние между верхним концом иглы и любой неподвижной частью прибора при положении иглы на поверхности и в глубине колбы.
+	
+	\begin{table}[H]
+		\caption{Постоянные величины.}
+		\label{table:const}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\begin{tabular}[c]{@{}c@{}}Плотность\\ этанола\\ $\rho_0$, кг/м$^3$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Плотность\\ воды\\ $\rho$, кг/м$^3$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Ускорение\\ свободного \\ падения\\ $g$, м/c$^2$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Пересчетный\\ коэффициент\\ $k$\end{tabular} & \begin{tabular}[c]{@{}c@{}}Коэффициент\\ поверхностного натяжения\\ этанола (T = 20$^\circ$С)\\ $\sigma_0$, мН/м\end{tabular} \\ \hline
+		809,5 & 1000,0 & 9,81 & 0,2 & 22,75                                                                                                                         \\ \hline
+	\end{tabular}
+	\end{table}
+
+
+
+	\section{Ход работы}
+	\subsection{Измерение диаметра иглы}
+	Измерим максимальное давление при пробулькивании пузырьков воздуха через спирт:
+	\bgroup
+	\def\arraystretch{1.7}%
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular}{|c|c|}
+				\hline
+				$P',$ дел. &48\\
+				\hline
+				$P,$ Па& 91.4\\
+				\hline
+				$P_{\text{макс}}$& 91.4\\
+				\hline
+				$\varepsilon_P,$ Па&$\sqrt{\left(\varepsilon_P^\text{сист}\right)^2 + \left(\varepsilon_P^\text{случ}\right)^2} = \sqrt{2^2 + 0^2} \approx 2$\\
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Результаты измерений в спирте}
+		\label{tab1}
+	\end{table}
+	\egroup
+	
+	По формуле \eqref{1} найдем диаметр иглы:
+	\begin{equation*}
+		d = \frac{4\sigma_{\text{с}}}{P_\text{макс}} = (0,97\pm 0.02)\text{ мм}.
+	\end{equation*}
+
+	Результат полученный под микроскопом: $D = (0.95\pm0.05)$ мм, это означает, что диаметр найденный экспериментально достаточно точен.
+	
+	\subsection{Измерение температурной зависимости коэффициента поверхностного натяжения}
+	
+	Снимать будем двумя способами: при касании поверхности воды и при полном погружении иглы.
+	
+	Глубина погружения измеренная линейкой: $\Delta h = (1.5\pm0.1)$ см. Глубина погружения по разнице давлений из первого опыта: $\Delta P = (203-126)*0.2*9.8 = 151\pm4 Па$, $\Delta h = \dfrac{\Delta P}{\rho g} = (1.54\pm0.04)см$.
+	
+	\begin{table}[H]
+		\centering
+		\begin{minipage}{.49\linewidth}
+			\centering
+			\bgroup
+			\def\arraystretch{1.2}
+				\begin{tabular}{|c|c|c|c|}
+					\hline
+					\multicolumn{4}{|c|}{$T = 23 ^\circ$С}\\
+					\hline
+					\multicolumn{2}{|c|}{Вверху}&\multicolumn{2}{c|}{Внизу}\\
+					\hline
+					$P',$ мм& $P,$ Па &$P',$ мм& $P,$ Па\\
+					\hline
+					126.0&246.0&203&397.9\\
+					\hline
+				\end{tabular}
+			\egroup
+		\end{minipage}
+		\begin{minipage}{.49\linewidth}
+			\centering
+			\bgroup
+			\def\arraystretch{1.2}%
+				\begin{tabular}{|c|c|c|c|}
+					\hline
+					\multicolumn{4}{|c|}{$T = 65.3 ^\circ$С}\\
+					\hline
+					\multicolumn{2}{|c|}{Вверху}&\multicolumn{2}{c|}{Внизу}\\
+					\hline
+					$P',$ мм& $P,$ Па &$P',$ мм& $P,$ Па\\
+					\hline
+					113.0& 221.5&203.0&397.9\\
+					\hline
+				\end{tabular}
+			\egroup
+		\end{minipage}
+		\caption{Результаты измерений для воды}
+		\label{water}
+	\end{table}
+
+	Рассчитывать коэффициент поверхностного натяжения будем по формуле:
+	\begin{equation*}
+		\sigma = \frac{\Delta P d}{4}.
+	\end{equation*}
+	Для измерений при опущенной игле учитываем глубину погружения, то есть $\Delta P = P - \rho g h.$
+	
+	Получаем таблицу:
+		\begin{table}[H]
+			\bgroup
+			\def\arraystretch{1.2}%
+			
+			\centering
+			\begin{tabular}{|c|c|c|}
+				\hline
+				$P', $ мм&$\sigma,\: \frac{\text{мН}}{\text{м}}$& $T,\: ^\circ$С  \\
+				\hline
+				203 & 76$\pm$2 & 23 \\ \hline
+				204 & 76$\pm$2 & 25 \\ \hline
+				205 & 77$\pm$2 & 30 \\ \hline
+				210 & 79$\pm$2 & 35 \\ \hline
+				208 & 78$\pm$2 & 40 \\ \hline
+				206 & 77$\pm$2 & 45 \\ \hline
+				205 & 77$\pm$2 & 50 \\ \hline
+				204 & 75$\pm$2 & 55 \\ \hline
+				203 & 76$\pm$2 & 60 \\ \hline
+			\end{tabular}
+
+			\egroup
+		\end{table}
+	Строим по ним график зависимости $\sigma(T)$:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.55]{chart1.png}
+		\caption{График зависимости $\sigma(T)$, для погруженной иглы}
+		\label{graph1}
+	\end{figure}
+
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.55]{chart2.png}
+		\caption{График зависимости $\sigma(T)$, для погруженной иглы (T > 35$^\circ$С)}
+		\label{graph1}
+	\end{figure}
+
+
+	По первому графику видно, что зависимость коэффициента поверхностного натяжения жидкости от её температуры не является прямой и не совпадает с теоретической,
+	вероятно, это связано с несовершенством конструкции установки. При выполнении эксперимента я заметил повышение давления пробулькивания с увеличением температуры, чего не должно быть. Также при переключении микроманометра на атмосферу после проведения 
+	измерений столб спирта не всегда возвращался в нулевое положение. При закрытии вентеля аспиратора очень медленно накапливалась капля воды, что может говорить о нарушенной герметичности.
+	Также об этом может свидетельствовать отсутствие пробулькивания при указанной частоте падения капель из аспиратора, для достижения нужного давления приходилось выставлять частоту капель выше указанной. 
+	Тем не менее после достижения температуры 35$^\circ$С зависимость можно описать прямой, в следующих вычислениях буду опираться на эту часть данных.
+
+	
+	Температурные коэффициенты $\left(\dfrac{d\sigma}{dT}\right)$:
+	\begin{enumerate}
+		\item Погруженная игла: $k = (-13.4\pm 0.5)\cdot 10^{-2}$ $\dfrac{\text{мН}}{\text{м}\cdot \text{К}}$, $\varepsilon \approx 3.7\%$.
+	\end{enumerate}
+
+	\subsection{Графики других величин}
+	
+	Окончательно, с помощью полученных данных построим графики теплоты образования единицы поверхности жидкости: $q = - T\cdot\dfrac{d\sigma}{dT}$ и поверхностной энергии $U$ единицы площади $F$: $\dfrac{U}{F} = \left(\sigma - T\cdot\dfrac{d\sigma}{dT}\right)$.
+	
+	Графики построены используя данные погруженной иглы:
+	\begin{table}[H]
+		\centering
+		\begin{minipage}{.49\linewidth}
+			\centering
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale = 0.25]{chart3.png}
+				\caption{График $\dfrac{U}{F}$}
+				\label{graph4}
+			\end{figure}
+		\end{minipage}
+		\begin{minipage}{.49\linewidth}
+			\centering
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale = 0.25]{Screenshot from 2023-02-19 18-18-50.png}
+				\caption{График $q$}
+				\label{graph5}
+			\end{figure}
+		\end{minipage}
+	\end{table}
+
+	\section{Вывод}
+	В ходе работы:
+	\begin{enumerate}
+		\item Был экспериментально измерен диаметр иглы при помощи коэффициента поверхностного натяжения спирта. Полученный результат $d = (0.97\pm 0.02)\text{ мм}$ с достаточной точность совпадает с диаметром измеренным с помощью микроскопа $d_{м} = (0.95\pm 0.05)\text{ мм}$.
+		\item Была измерена глубина погружения при помощи линейки $\Delta h = (1.5\pm0.1)$ см и теоретически по разнице давлений $\Delta P = (203-126)*0.2*9.8 = 150.9\pm0.7$, $\Delta h = \dfrac{\Delta P}{\rho g} = (1.54\pm0.02)см$ прямые и косвенные измерения сходятся с учетом погрешностей.
+		\item Получены коэффициенты поверхностного натяжения воды при различных ее температурах, например $\sigma = (76\pm 2)\:\frac{\text{мН}}{\text{м}}$ при температуре 25 $^\circ$С, однако значения не совпали с табличными (73 мН/м при 25 ∘С.), я полагаю это связано с нарушением герметичности установки (подробнее описал выше).
+		\item наибольшую погрешность вносит измерение давления при помощи микроманометра (2 процента). Уличшить установку можно, успользуя более точный цифровой манометр, а также для усключения разгерметизации, вероятно детали конструкции должны быть лучше подогнаны. 
+	\end{enumerate}
+	
+	
+	
+	
+	
+	
+	
+\end{document}
